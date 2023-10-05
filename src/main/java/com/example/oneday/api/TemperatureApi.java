@@ -60,7 +60,7 @@ public class TemperatureApi {
             Optional<Temperatures> temperature = temperaturesRepository.findByPostalCode(Integer.parseInt(postalCode));
             Optional<Integer> offset = offsetsRepository.findByAltitude(alt.intValue());
 
-            return ResponseEntity.ok(String.valueOf(temperature.get().getTemperature() - offset.get()));
+            return ResponseEntity.ok(String.valueOf(temperature.get().getTemperature() + offset.get()));
         } catch (NumberFormatException ex) {
             return ResponseEntity.status(500).body("No postal code provided for given address");
         } catch (NoSuchElementException ex) {

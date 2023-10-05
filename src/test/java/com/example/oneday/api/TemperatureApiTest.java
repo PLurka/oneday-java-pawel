@@ -3,7 +3,6 @@ package com.example.oneday.api;
 import com.example.oneday.OnedayApplication;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatusCode;
@@ -11,8 +10,6 @@ import org.springframework.http.ResponseEntity;
 
 @SpringBootTest(classes = OnedayApplication.class)
 public class TemperatureApiTest {
-
-    @InjectMocks
     @Autowired
     TemperatureApi temperatureApi;
 
