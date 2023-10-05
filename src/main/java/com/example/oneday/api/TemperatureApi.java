@@ -42,8 +42,8 @@ public class TemperatureApi {
     }
 
     @GetMapping("/temperature")
-    public ResponseEntity<String> sayHello(@RequestParam(value = "city", defaultValue = "Bergerac") String city,
-                                           @RequestParam(value = "street", defaultValue = "19 rue Jean Vilar") String street) {
+    public ResponseEntity<String> getStandardMinimumOutdoorTemperature(@RequestParam(value = "city", defaultValue = "Bergerac") String city,
+                                                                       @RequestParam(value = "street", defaultValue = "19 rue Jean Vilar") String street) {
 
         RestTemplate restTemplate = new RestTemplate();
 
